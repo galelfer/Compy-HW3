@@ -35,7 +35,7 @@ public:
 
     Node* makeNodeFromID(const string& id, int lineno);
 
-    const arg* get_var(const string &unique_name);
+    const arg* get_var(const string &unique_name , bool isFunc);
 
     const arg* get_var_type(const string &name, const string &type);
 
@@ -68,6 +68,8 @@ public:
     void onlyOneMain(int lineno , const string &name);
 
     void check_valid_b(const string &name , int lineno);
+    
+    void assign_check_types(const string &type1, const string &type2, int lineno);
 };
 
 
